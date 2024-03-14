@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIS Login - Store Inventory System</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  </head>
+  <style>
+    body {
+      background-color: #f4f5fa;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <div class="col-md-6 mt-3">
+          <div class="card">
+            <div
+              class="card-header pt-3"
+              style="
+                background-color: #262d47;
+                font-family: 'Courier New', Courier, monospace;
+              "
+            >
+              <h1 class="card-title text-center text-white">LOGIN</h1>
+            </div>
+            <div class="card-body mt-3">
+              <form>
+                <div class="mb-2">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Your email"
+                    required
+                    id="email"
+                    aria-describedby="emailHelp"
+                  />
+                </div>
+                <div class="mb-2">
+                  <label for="password" class="form-label">Password</label>
+                  <div class="input-group">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Password"
+                      required
+                      id="password"
+                    />
+                    <button
+                      class="btn btn-outline-secondary"
+                      type="button"
+                      id="showPasswordBtn"
+                    >
+                      Show
+                    </button>
+                  </div>
+                </div>
+                <div class="text-left mt-3">
+                  <p>
+                    <a
+                      class="text-primary text-decoration-none"
+                      href="html/forgotpass.html"
+                      >Forgot Password?</a
+                    >
+                  </p>
+                </div>
+                <div class="text-center">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="width: 100%"
+                  >
+                    <a class="text-white text-decoration-none" href="#"
+                      >Sign In</a
+                    >
+                  </button>
+                  <br /><br />
+                  <p>
+                    Don't have an account?
+                    <a
+                      class="text-primary text-decoration-none"
+                      href="html/signup.html"
+                      >Register</a
+                    >
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("showPasswordBtn")
+        .addEventListener("click", function () {
+          var passwordInput = document.getElementById("password");
+          if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            this.textContent = "Hide";
+          } else {
+            passwordInput.type = "password";
+            this.textContent = "Show";
+          }
+        });
+    </script>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
